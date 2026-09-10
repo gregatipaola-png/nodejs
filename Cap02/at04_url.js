@@ -1,0 +1,10 @@
+const console = require('console')
+const url = require('url')
+let uri = 'https://www.google.com/search?q=node.js&rlz=1C1GCEU_pt-PTBR1200BR1201&oq=node&gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyBggAEEUYOTIHCAEQABiABDIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIGCAcQRRg80gEIMzE5N2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8'
+let partUrl = new url.URL(uri)
+console.log('Domínio: ', partUrl.host)
+console.log('Caminho ou Rota: ', partUrl.pathname)
+console.log('Query String: ', partUrl.search)
+console.log('Apenas parâmetro: ', partUrl.searchParams)
+console.log('Valor do parâmetro q: ', partUrl.searchParams.get('q'))
+console.log('Valor do parâmetro rlz: ', partUrl.searchParams.get('rlz'))
